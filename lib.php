@@ -25,6 +25,8 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
+namespace filter_ipa;
+
 defined('MOODLE_INTERNAL') || die();
 
 define('FILTER_IPA_START', '-{');
@@ -40,7 +42,7 @@ define('FILTER_IPA_END', '}-');
  * @copyright  2014 onwards Kevin Wiliarty {@link http://kevinwiliarty.com}
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-class filter_ipa_mappings {
+class mappings {
 
     /** @var array The list of specific mappings from X-SAMPA to unicode IPA */
     protected $filteripamappings = array(
@@ -244,4 +246,7 @@ class filter_ipa_mappings {
         return $mappings;
     }
 }
+
+// For backward compatibility with old code using filter_ipa_mappings
+class_alias('\filter_ipa\mappings', 'filter_ipa_mappings');
 
