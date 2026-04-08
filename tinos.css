@@ -1,1 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Tinos&subset=latin,latin-ext,cyrillic-ext,greek-ext,greek,vietnamese,cyrillic);
+@font-face {
+     font-family: Tinos;
+     src: url(fonts/Tinos.woff2);
+}
